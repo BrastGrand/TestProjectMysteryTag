@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace TestProjectForMysteryTag
@@ -76,7 +75,7 @@ namespace TestProjectForMysteryTag
 
     }
 
-    [System.Serializable]
+    [Serializable]
     public struct BoundaryMove
     {
         public float xMin, xMax, yMin, yMax;
