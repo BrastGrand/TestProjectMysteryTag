@@ -8,6 +8,7 @@ namespace TestProjectForMysteryTag
     public class MissionsContainer : ScriptableObject
     {
         [SerializeField] private List<Mission> missionsList;
+        [SerializeField] private int levelCountGenerate = 150;
 
         public int GetMissionsCount => missionsList.Count;
 
@@ -27,7 +28,7 @@ namespace TestProjectForMysteryTag
         {
             missionsList.Clear();
             int countKill = 10;
-            for (int i = 0; i < 100; i++)
+            for (int i = 0; i < levelCountGenerate; i++)
             {
                 missionsList.Add(new Mission($"Mission {i + 1}", countKill, 0.75f, UnityEngine.Random.Range(30,  Mathf.Clamp(30 + i, 5, 100))));
                 countKill += UnityEngine.Random.Range(2, 10);
